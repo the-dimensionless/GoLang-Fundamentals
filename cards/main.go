@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	cards := newDeck()
+	//cards := newDeck()
 	//cards.print()
 	//fmt.Println(cards.toString())
 
@@ -9,5 +9,7 @@ func main() {
 	hand.print()
 	remainingDeck.print() */
 
-	cards.saveToFile("my_cards")
+	//cards.saveToFile("my_cards")
+	cards := readDeckFromFile("my_cards")
+	cards.print()
 }

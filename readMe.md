@@ -161,6 +161,16 @@ custom type -> []string -> string -> []byte
 Joining strings :pkg strings
 Join(a []string, sep string) string
 
+* Reading from file
+ioutil.ReadFile(filename) => []byte, error
+if (error != nil) {
+    // handle error
+    exit using go pkg os
+}
+
+* splitting slice
+strings.Split(s, ",")
+
 
 
 
