@@ -44,9 +44,53 @@ pkg -> go build -> no executable!
 * syntax: import "pkg-name"
 * Used to access some other pkg code like fmt (format library)
 * Standard pkgs : debug, math, encoding, fmt, io, crypto
+* Files in the same package do not have to be imported into each other.
 
 * Link : https://github.com/StephenGrider/GoCasts/tree/master/diagrams
          https://www.draw.io/
+
+
+#### Variables
+
+syntax: var <identifier> <type> = <value>
+or <identifier> := <value> (only for new variables not reassignment)
+* ex
+
+var card string = "value" (type is defined)
+is same as
+card := 'value' (type is inferred)
+
+* Basic Go Types -> bool, string, int, float64
+* cannot use := outside function body but can define var outside
+
+* function with return type
+
+> func newCard() string {
+	return "Five of Diamonds"
+}
+
+#### Slices & for loops
+
+1. Array (Fixed length list of things/records)
+2. Slice (Array that can grow or shrink)
+
+Both hold homogeneous data  
+
+syntax:
+> card := []string { "A", "B" }
+slice of type strings
+
+Adding new data
+>cards = append(cards, "Six of Spades")
+* append returns a new slice, does not modify the original data
+
+Iteration
+>   for i, card := range cards {
+		fmt.Println(i, card)
+	}
+iteration over closed set -> index is i, item is card
+range loops over the slice
+
 
 
 
