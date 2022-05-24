@@ -102,6 +102,12 @@ Attached functionality to our data
 * Custome Type
 > type deck []string
 
+* Adding function to our custom type (Receiver)
+> func (d deck) print() { ... }
+
+here deck is our data type 
+d is the actual copy of the deck type variable we are working with
+
 
 
 
