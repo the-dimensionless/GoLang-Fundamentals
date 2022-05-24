@@ -1,5 +1,7 @@
 ### Go Fundamentals
 
+* Not an Object Oriented Language
+
 #### Go CLI
 
 * go run -> execute file cmd -> go run <filename> <file2> ...
@@ -62,6 +64,7 @@ card := 'value' (type is inferred)
 
 * Basic Go Types -> bool, string, int, float64
 * cannot use := outside function body but can define var outside
+* every variable defined must be used else compilation error
 
 * function with return type
 
@@ -91,6 +94,13 @@ Iteration
 iteration over closed set -> index is i, item is card
 range loops over the slice
 
+
+#### Functions with receivers [alternative to classes ?]
+
+Attached functionality to our data
+
+* Custome Type
+> type deck []string
 
 
 
