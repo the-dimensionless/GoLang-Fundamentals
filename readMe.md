@@ -127,6 +127,7 @@ Another form (unconventional)
     [start index inclusive : end index not including]
     arr[0:2] = arr[:2]
     arr[2:]
+    original slice remains the same
 
 * Returning multipe values from a function
 >func deal(d deck, handSize int) (deck, deck) {
@@ -137,6 +138,30 @@ return val1, val2, ....
 
 reading mulitple values
 >hand, remainingDeck := deal(cards, 5)
+
+
+#### Bytes Slices [] byte
+
+go standard lib for io => ioutil
+
+byte slice <=> string of characters
+
+"Hi There" -> ASCII vals (byte slice) -> [72 105 ...]
+
+* Type Conversion => 
+x := "Hi"
+type(x)
+
+byte slice => []byte(x)
+
+* Our need
+
+custom type -> []string -> string -> []byte
+
+Joining strings :pkg strings
+Join(a []string, sep string) string
+
+
 
 
 
