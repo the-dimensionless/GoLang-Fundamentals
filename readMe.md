@@ -39,4 +39,19 @@ pkg -> go build -> no executable!
 
 !! Any package main must have a function named main() inside it
 
+#### Imports
+
+* syntax: import "pkg-name"
+* Used to access some other pkg code like fmt (format library)
+* Standard pkgs : debug, math, encoding, fmt, io, crypto
+
+* Link : https://github.com/StephenGrider/GoCasts/tree/master/diagrams
+         https://www.draw.io/
+
+
+
+
+
+
+
 
