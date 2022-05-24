@@ -5,6 +5,7 @@ import "fmt"
 // Create a new type of deck which is a slice of strings
 type deck []string
 
+// Create a cards slice/array of type deck
 func newDeck() deck {
 	cards := deck{
 		"Joker",
@@ -30,9 +31,14 @@ func newDeck() deck {
 	return cards
 }
 
-// fx to print cards in the deck
+// fx with Receiver to print cards in the deck
 func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
+}
+
+// fx with arguments & multiple return types
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }

@@ -99,7 +99,7 @@ range loops over the slice
 
 Attached functionality to our data
 
-* Custome Type
+* Custom Type
 > type deck []string
 
 * Adding function to our custom type (Receiver)
@@ -117,6 +117,26 @@ Another form (unconventional)
 
 >for _, suit := range cardSuits {
 * Use  _ -> unused variable
+
+
+* Splitting the Slices/Arrays
+
+1. Indexed from 0
+2. Access elements with index => slice[0], slice[1]...
+3. Range Access => Select subset of slice
+    [start index inclusive : end index not including]
+    arr[0:2] = arr[:2]
+    arr[2:]
+
+* Returning multipe values from a function
+>func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
+
+return val1, val2, ....
+
+reading mulitple values
+>hand, remainingDeck := deal(cards, 5)
 
 
 
