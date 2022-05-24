@@ -107,6 +107,8 @@ Attached functionality to our data
 
 here deck is our data type 
 d is the actual copy of the deck type variable we are working with
+* Convention for receiver argument
+one-two letter word based of type, i.e d for deck
 
 
 
