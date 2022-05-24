@@ -110,6 +110,14 @@ d is the actual copy of the deck type variable we are working with
 * Convention for receiver argument
 one-two letter word based of type, i.e d for deck
 
+Another form (unconventional)
+> func (this laptopSize) getSizeOfLaptop() laptopSize {
+    return this
+}
+
+>for _, suit := range cardSuits {
+* Use  _ -> unused variable
+
 
 
 
