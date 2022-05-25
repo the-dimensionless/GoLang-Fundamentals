@@ -37,8 +37,8 @@ func main() {
 	tony.contact.zipCode = 10880
 	tony.print()
 	//fmt.Printf("%+v", tony) //extracts all inner members
-	tonyPointer := &tony
-	tonyPointer.updateFullName("Andrew ", "Garfield")
+	//tonyPointer := &tony
+	tony.updateFullName("Andrew ", "Garfield")
 	tony.print() // no changes observed :(
 }
 

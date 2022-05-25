@@ -41,3 +41,15 @@ printin p gives some mem location
 *person => *<type> => pointer to this (person) type of variable
 *pointerVariable => value at that mem pointed by this pointer
 
+* reference types like slices, maps, channels, pointers, functions
+are managed internally in terms of value -> pointer and vice versa
+conversion
+* basic types => int, float, string, bool, struct => we need to take
+care of pointers while passing into functions
+
+
+* Creating a slice
+Go automatically creates an array and a structure that recors
+the length of slice,
+the capacity of the slice,
+and a reference to the underlying array
