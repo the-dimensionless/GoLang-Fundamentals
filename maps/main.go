@@ -18,6 +18,12 @@ func main() {
 	// method 3
 	cols := make(map[string]string)
 	cols["white"] = "#000000"
-	fmt.Println(cols)
 
+	printMap(cols)
+}
+
+func printMap(c map[string]string) {
+	for key, value := range c {
+		fmt.Printf("Key: %v and Value: %v", key, value)
+	}
 }

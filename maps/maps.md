@@ -22,4 +22,6 @@
     c.key = value => won't work as keys & values are statically typed
 
 * iteration over map
-    
+    for key, value := range c {
+		fmt.Printf("Key: %v and Value: %v", key, value)
+	}
