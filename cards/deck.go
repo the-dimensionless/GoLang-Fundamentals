@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // Create a new type of deck which is a slice of strings
@@ -73,8 +74,11 @@ func readDeckFromFile(filename string) deck {
 }
 
 func (d deck) shuffle() {
+	source := rand.NewSource(int64(time.Now().UnixNano())) // Create new source/seed
+	r := rand.New(source)
+
 	for i := range d {
-		newIndex := rand.Intn(len(d) - 1)
+		newIndex := r.Intn(len(d) - 1)
 		// one line swapping
 		d[i], d[newIndex] = d[newIndex], d[i]
 	}

@@ -175,6 +175,8 @@ strings.Split(s, ",")
 math/rand -> rand.Int(number)
 generator seed is same always
 
+* time.Now() from time pkg
+
 
 
 
