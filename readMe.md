@@ -177,6 +177,12 @@ generator seed is same always
 
 * time.Now() from time pkg
 
+#### Testing
+
+In project dir create new go file with suffix '_test'
+
+test funct starts with caps and recieves a param of *testing.T type
+
 
 
 
