@@ -12,3 +12,6 @@
 Person can have ContactInfo
 
 * , after multiline structs
+
+* Pointers 
+

@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type contactInfo struct {
 	email   string
@@ -33,5 +35,28 @@ func main() {
 	tony.lastName = "Stark"
 	tony.contact.email = "tony@stark.com"
 	tony.contact.zipCode = 10880
-	fmt.Printf("%+v", tony)
+	tony.print()
+	//fmt.Printf("%+v", tony) //extracts all inner members
+	tony.updateFullName("Andrew", "Garfield")
+	tony.print() // no changes observed :(
+}
+
+// struct with receivers
+func (p person) print() {
+	fmt.Printf("\n Name: %v\n Contact: %v, %d \n",
+		p.firstName+p.lastName,
+		p.contact.email, (p.contact.zipCode))
+}
+
+func (p person) updateFirstName(s string) {
+	p.firstName = s
+}
+
+func (p person) updateLastName(s string) {
+	p.lastName = s
+}
+
+func (p person) updateFullName(f string, l string) {
+	p.firstName = f
+	p.lastName = l
 }
