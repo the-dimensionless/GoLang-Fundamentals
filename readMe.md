@@ -171,6 +171,10 @@ if (error != nil) {
 * splitting slice
 strings.Split(s, ",")
 
+* random
+math/rand -> rand.Int(number)
+generator seed is same always
+
 
 
 
