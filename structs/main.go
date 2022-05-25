@@ -37,7 +37,8 @@ func main() {
 	tony.contact.zipCode = 10880
 	tony.print()
 	//fmt.Printf("%+v", tony) //extracts all inner members
-	tony.updateFullName("Andrew", "Garfield")
+	tonyPointer := &tony
+	tonyPointer.updateFullName("Andrew ", "Garfield")
 	tony.print() // no changes observed :(
 }
 
@@ -48,15 +49,15 @@ func (p person) print() {
 		p.contact.email, (p.contact.zipCode))
 }
 
-func (p person) updateFirstName(s string) {
-	p.firstName = s
+func (p *person) updateFirstName(s string) {
+	(*p).firstName = s
 }
 
-func (p person) updateLastName(s string) {
-	p.lastName = s
+func (p *person) updateLastName(s string) {
+	(*p).lastName = s
 }
 
-func (p person) updateFullName(f string, l string) {
-	p.firstName = f
-	p.lastName = l
+func (pointerToP *person) updateFullName(f string, l string) {
+	(*pointerToP).firstName = f
+	(*pointerToP).lastName = l
 }
