@@ -28,3 +28,5 @@ channel <- 5 (value pushed in the channel)
 channelVariable <- channel (reading value in a variable from channel)
 
 fmt.Println(<- channel)
+
+### Function literal => Anonymous function
